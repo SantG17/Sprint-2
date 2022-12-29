@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sprint 2</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <main class="container">
+
+    <div class="card">
+      <div class="front_card">
+        <img src="./images/bg-card-front.png" alt="Front img">
+        <div class="front_cd">
+          <img src="./images/card-logo.svg" alt="">
+          <div>
+            <p class="n_card" id="n_card">0000 0000 0000 0000</p>
+            <div class="nd_card">
+              <p id="name_card">Jane Appleseed</p>
+              <p>
+                <span id="month_card">00</span>/<span id="year_card">00</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="back_card">
+        <img src="./images/bg-card-back.png" alt="back">
+        <div class="bd_card">
+          <p class="card-cvc" id="cvc_card">000</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="form_content">
+      <form class="form" id="form">
+        <div class="form_all">
+          <label for="input_name" class="label">Cardholder Name</label>
+          <input type="text" class="input" id="input_name" placeholder="e.g. Jane Appleseed">
+          <label class="labelError hidden" id="lblErrorName"></label>
+        </div>
+        <div class="form_all">
+          <label for="input_number" class="label">Card Number</label>
+          <input type="text" class="input" id="input_number" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+          <label class="labelError hidden" id="lblErrorCardNumber"></label>
+        </div>
+        <div class="form_all mm_yy">
+          <div class="dates">
+            <label for="input_month" class="label">Exp. Date (MM/YY)</label>
+            <div class="dateYear">
+              <div>
+                <input type="number" class="input" id="input_month" placeholder="MM" maxlength="2">
+                <label class="labelError hidden" id="lblErrorMM"></label>
+              </div>
+              <div>
+                <input type="number" class="input" id="input_year" placeholder="YY" maxlength="2">
+                <label class="labelError hidden" id="lblErrorYY"></label>
+              </div>
+            </div>
+          </div>
+          <div class="dates">
+            <label for="input_cvc" class="label">CVC</label>
+            <input type="number" class="input" id="input_cvc" placeholder="e.g. 123" maxlength="3">
+            <label class="labelError hidden" id="lblErrorCvc"></label>
+          </div>
+        </div>
+        <div class="form_all">
+          <button class="button" type="submit" id="btnsubmit">Confirm</button>
+        </div>
+      </form>
+      
+      <div class="thanks disable" id="thanks">
+        <img src="./images/icon-complete.svg" alt="thanks">
+        <p class="thanks_title">Thank you!</p>
+        <p class="thanks_text">We've added your card details</p>
+        <button type="submit" class="button" id="continue" value="confirm">Continue</button>
+      </div>
+    </div>
+ </main> 
+
+  <script src="./main.js"></script>
+</body>
+</html>

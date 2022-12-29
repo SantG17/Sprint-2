@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,800;1,900&family=DM+Sans:wght@400;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,900&family=Overpass:wght@400;700&family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+:root {
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-gray: hsl(270, 3%, 87%);
+    --clr-dark-gray: hsl(279, 6%, 55%);
+    --clr-dark-violet: hsl(278, 68%, 11%);
+    --clr-red: hsl(0, 100%, 66%);
+}
+
+body {
+    background-color: var(--clr-white);
+}
+
+.container {
+    background-image: url("../images/bg-main-mobile.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    padding-bottom: 2rem;
+}
+
+.card {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    max-width: 100%;
+}
+
+.front_card {
+    align-self: start;
+    max-width: 85%;
+    order: 2;
+    margin-top: -4rem;
+    z-index: 1;
+    position: relative;
+}
+
+.front_cd {
+    position: absolute;
+    inset: 0;
+    color: var(--clr-white);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    padding: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.front_cd > div {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 100%;
+}
+
+.front_cd img {
+    max-width: 3.5rem;
+}
+
+.n_card {
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+}
+
+.nd_card {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: .65rem;
+}
+
+.back_card {
+    align-self: end;
+    max-width: 85%;
+    order: 1;
+    position: relative;
+}
+
+.bd_card {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    position: absolute;
+    inset: 0;
+    color: var(--clr-white);
+    padding-right: 12%;
+    padding-bottom: .5rem;
+    font-size: .75rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    padding-top: 0;
+    gap: 1rem;
+    text-transform: uppercase;
+}
+
+.form_all {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_all.mm_yy {
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.form_all.mm_yy > div {
+    width: 50%;
+}
+
+.dateYear {
+    display: flex;
+    gap: .5rem;
+}
+
+.dateYear input {
+    width: 100%;
+}
+
+.dates {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    border: 1px solid var(--clr-light-gray);
+    padding: .75rem;
+    border-radius: .5rem;
+}
+
+.input::placeholder {
+    color: var(--clr-light-gray);
+}
+
+.label {
+    text-transform: uppercase;
+    font-size: .75rem;
+    letter-spacing: 1px;
+    color: var(--clr-dark-violet);
+    margin-bottom: .25rem;
+}
+
+.button {
+    background-color: var(--clr-dark-violet);
+    color: var(--clr-white);
+    font-size: 1rem;
+    padding-block: .75rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    border: 0;
+}
+
+.thanks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.thanks_title {
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.thanks_text {
+    color: var(--clr-dark-gray);
+}
+
+.thanks button {
+    width: 90%;
+}
+
+.disable {
+    display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.inputError{
+    border: 1px solid var(--clr-red);
+}
+
+.labelError{
+    color: var(--clr-red);
+    font-size: 12px;
+    margin-top: 5px;
+    
+}
+
+.hidden{
+    display: none !important;
+}
+
+@media screen and (min-width: 800px) {
+
+    .container {
+        background-image: url("../images/bg-main-desktop.png");
+        background-position: left;
+        background-size: auto 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 100vh;
+    }
+
+    .card {
+        padding-inline: 6rem;
+        gap: 2rem;
+        justify-content: center;
+    }
+
+    .front_card {
+        order: 1;
+        margin-top: 0;
+        width: 18rem;
+        max-width: unset;
+    }
+
+    .back_card {
+        order: 2;
+        width: 18rem;
+        max-width: unset;
+    }
+
+    .form_content {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-right: auto;
+    }
+
+    .form {
+        width: 25rem;
+        max-width: 100%;
+    }
+
+    .thanks {
+        width: 25rem;
+    }
+}
